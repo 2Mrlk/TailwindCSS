@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Tailwind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Open Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-[url('https://source.unsplash.com/1920x1080/?montanha')] bg-cover bg-center font-sans text-sm">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center">
+      <h1 class="text-3xl font-semibold text-gray-800">Login</h1>
+      <p class="text-sm text-gray-600 mt-1">Entre com seus dados</p>
+      <form class="w-64 mt-4 flex flex-col items-start">
+        <label class="text-gray-800 font-semibold mb-1">E-mail</label>
+        <input type="email" placeholder="seu@email.com"
+          class="w-full border border-gray-200 rounded-md pl-3 py-2 mb-2 placeholder:text-sm placeholder:text-gray-400 focus:border-blue-600 focus:outline-none" />
+        <label class="text-gray-800 font-semibold mb-1">Senha</label>
+        <input type="password" placeholder="••••••"
+          class="w-full border border-gray-200 rounded-md pl-3 py-2 placeholder:text-sm placeholder:text-gray-400 focus:border-blue-600 focus:outline-none" />
+        <a class="text-blue-500 hover:text-blue-700 mt-4 self-start cursor-pointer">Esqueceu a senha?</a>
+        <button type="submit" class="mt-4 w-full rounded-md font-semibold py-2 text-white bg-gradient-to-br from-blue-600 to-blue-400">
+          Entrar
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
